@@ -7,7 +7,7 @@ import '../../../../../core/utils/styles.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
-
+//text
   @override
   Widget build(BuildContext context) {
     return SizedBox(
