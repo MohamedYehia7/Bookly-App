@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
@@ -36,6 +37,12 @@ class BookDetailsViewBody extends StatelessWidget {
             'Rudyard Kipling',
             style: Styles.textStyle18.copyWith(fontStyle: FontStyle.italic),
           )),
+          const SizedBox(
+            height: 18,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          )
         ],
       ),
     );
