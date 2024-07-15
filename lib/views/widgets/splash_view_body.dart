@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/core/utils/assets_data.dart';
 import 'package:bookly_app/views/widgets/sliding_text.dart';
 import 'package:flutter/cupertino.dart';

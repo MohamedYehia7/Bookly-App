@@ -16,11 +16,12 @@ class SearchViewBody extends StatelessWidget {
         children: [
           CustomSearchTextField(),
           SizedBox(height: 16),
-          Text('Search Result',style: Styles.textStyle18,),
+          Text(
+            'Search Result',
+            style: Styles.textStyle18,
+          ),
           SizedBox(height: 16),
           Expanded(child: SearchResultListView()),
-
-
         ],
       ),
     );
@@ -42,4 +43,3 @@ class SearchResultListView extends StatelessWidget {
     );
   }
 }
-

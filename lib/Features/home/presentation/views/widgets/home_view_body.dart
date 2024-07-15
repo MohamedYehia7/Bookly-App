@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +32,6 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-
             ],
           ),
         ),
@@ -45,8 +43,5 @@ class HomeViewBody extends StatelessWidget {
         )
       ],
     );
-
   }
 }
-
-

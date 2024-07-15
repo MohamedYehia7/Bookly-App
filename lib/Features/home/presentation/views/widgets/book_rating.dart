@@ -5,17 +5,21 @@ import 'package:flutter/widgets.dart';
 import '../../../../../core/utils/styles.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 class BookRating extends StatelessWidget {
-  const BookRating({super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+  const BookRating(
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
 
   final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisAlignment: mainAxisAlignment,
       children: const [
-        Icon(FontAwesomeIcons.solidStar, color: Color(0xffFFDD4F),size: 15,),
+        Icon(
+          FontAwesomeIcons.solidStar,
+          color: Color(0xffFFDD4F),
+          size: 15,
+        ),
         SizedBox(
           width: 6.3,
         ),
