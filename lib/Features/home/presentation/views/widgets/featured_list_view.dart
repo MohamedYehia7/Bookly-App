@@ -11,11 +11,14 @@ class FeaturedBooksListView extends StatefulWidget {
   final List<BookEntity> books;
 
   @override
+  // ignore: library_private_types_in_public_api
   _FeaturedBooksListViewState createState() => _FeaturedBooksListViewState();
 }
 
 class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
   final ScrollController _scrollController = ScrollController();
+  var nextPage = 1;
+  var isLoading = false;
 
   @override
   void initState() {
@@ -30,7 +33,7 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
     super.dispose();
   }
 
-  void _onScroll() {
+  void _onScroll() async {
     var currentPosition = _scrollController.position.pixels;
     var maxPosition = _scrollController.position.maxScrollExtent;
     if (_scrollController.position.atEdge) {
@@ -39,12 +42,16 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
         final threshold = 0.7 * maxPosition;
         if (currentPosition >= threshold) {
           // Trigger fetchFeaturedBooks
-          BlocProvider.of<FeaturedBooksCubit>(context).fetchFeaturedBooks();
+          if (!isLoading) {
+            isLoading = true;
+            await BlocProvider.of<FeaturedBooksCubit>(context)
+                .fetchFeaturedBooks(pageNumber: nextPage++);
+            isLoading = false;
+          }
         }
       }
     }
   }
-
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,6 @@ import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'Features/home/domain/use_cases/fetch_featured_books_use_case.dart';
 import 'core/functions/setup_service_locator.dart';
